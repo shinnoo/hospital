@@ -1,13 +1,13 @@
-package tacos;
+package hospital;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TacoCloudApplication {
+public class HospitalApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TacoCloudApplication.class, args);
+		SpringApplication.run(HospitalApplication.class, args);
 	}
 
 }

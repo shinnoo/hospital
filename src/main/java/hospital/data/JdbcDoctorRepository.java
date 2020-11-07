@@ -1,9 +1,9 @@
-package tacos.data;
+package hospital.data;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
-import tacos.Doctor;
+import hospital.Doctor;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -39,6 +39,11 @@ public class JdbcDoctorRepository implements DoctorRepository {
                 doctor.getType(),
                 doctor.getAcademicLevel());
         return doctor;
+    }
+
+    @Override
+    public void delete(String id) {
+        jdbc.queryForObject("delete from Doctor where id=?", this::mapRowToIngredient, id);
     }
 
     private Doctor mapRowToIngredient(ResultSet rs, int rowNum)

@@ -1,4 +1,4 @@
-package tacos;
+package hospital;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
